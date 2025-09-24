@@ -3,6 +3,7 @@ import { Suspense } from 'react'
 import './App.css'
 import Navbar from './Components/Navbar'
 import Issuemanage from './Components/Issuemanage'
+import Loader from './Components/Loader'
 
 const fetchIssue = async () => {
   const res = await fetch('/data.json')
@@ -18,7 +19,7 @@ const fetchPromise = fetchIssue()
     <>
       <Navbar></Navbar>
 
-      <Suspense fallback={<p>loading data...</p>}>
+      <Suspense fallback={<Loader></Loader>}>
       <Issuemanage fetchPromise={fetchPromise}></Issuemanage>
       </Suspense>
     </>

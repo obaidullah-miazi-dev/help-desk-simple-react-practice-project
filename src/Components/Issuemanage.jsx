@@ -15,13 +15,16 @@ const Issuemanage = ({ fetchPromise }) => {
             <CountCards data={data}></CountCards>
             <Btns toggle={toggle} setToggle={setToggle}></Btns>
             <Container>
-                <div className='md:grid grid-cols-3 gap-5 pb-5 px-3 md:px-0 space-y-5 md:space-y-0'>
                 {
-                    filteredData.map((issue, ind) => {
-                        return <IssuesCards key={ind} data={data} issue={issue} setData={setData}></IssuesCards>
-                    })
+                    filteredData.length == 0 ? <h1 className='mt-52 text-center text-4xl font-bold'>No Data Found ⚠️</h1>
+                        : <div className='md:grid grid-cols-3 gap-5 pb-5 px-3 md:px-0 space-y-5 md:space-y-0'>
+                            {
+                                filteredData.map((issue, ind) => {
+                                    return <IssuesCards key={ind} data={data} issue={issue} setData={setData}></IssuesCards>
+                                })
+                            }
+                        </div>
                 }
-            </div>
             </Container>
 
         </div>
