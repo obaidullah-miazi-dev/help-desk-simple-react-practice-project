@@ -9,7 +9,7 @@ const CountCards = ({data}) => {
 
     return (
          <Container>
-      <div className="grid grid-cols-3 gap-[20px] my-[50px]">
+      <div className="md:grid px-4 md:px-0 space-y-4 md:space-y-0 grid-cols-3 gap-[20px] my-[50px]">
         <div className="rounded-md p-7 text-white h-[250px] bg-gray-600 flex flex-col items-center justify-center">
           <h2 className="font-bold text-[35px]">Pending</h2>
           <p className="font-semibold text-[26px]">{pendingData.length}</p>

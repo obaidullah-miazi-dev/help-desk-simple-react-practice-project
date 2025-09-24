@@ -6,7 +6,7 @@ const Btns = ({toggle,setToggle}) => {
 
     return (
         <Container>
-            <div className='text-right'>
+            <div className='text-center md:text-right mb-12'>
                 {
                     btns.map((btn,ind) => {
                         return (<button key={ind} className={`toggle-btn 
