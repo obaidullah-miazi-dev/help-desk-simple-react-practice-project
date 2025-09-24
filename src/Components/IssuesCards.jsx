@@ -20,7 +20,7 @@ const IssuesCards = ({ issue, data, setData }) => {
 
 
            
-             <div onClick={handleClick} className='mx-auto h-full md:mx-0 cursor-pointer bg-sky-50 shadow-md p-5 rounded-xl max-w-[550px] space-y-3'>
+             <div onClick={handleClick} id='home' className='mx-auto h-full md:mx-0 cursor-pointer bg-sky-50 shadow-md p-5 rounded-xl max-w-[550px] space-y-3'>
                 <img className='w-20 h-20 rounded-full' src={issue.userImg} alt="" />
                 <h3 className='text-xl font-bold'>User: {issue.requestedBy}</h3>
                 <div className='md:flex space-y-2 md:space-y-0 justify-between items-center'>

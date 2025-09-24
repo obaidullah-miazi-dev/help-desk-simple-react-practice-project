@@ -2,7 +2,7 @@ import Container from "./Container";
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-gray-300 px-8 py-12 ">
+    <footer id="footer" className="bg-black text-gray-300 px-8 py-12 ">
       <Container>
         <div className="grid md:grid-cols-5 gap-8">
           <div>
