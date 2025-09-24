@@ -4,6 +4,7 @@ import './App.css'
 import Navbar from './Components/Navbar'
 import Issuemanage from './Components/Issuemanage'
 import Loader from './Components/Loader'
+import Footer from './Components/Footer'
 
 const fetchIssue = async () => {
   const res = await fetch('/data.json')
@@ -22,7 +23,10 @@ const fetchPromise = fetchIssue()
       <Suspense fallback={<Loader></Loader>}>
       <Issuemanage fetchPromise={fetchPromise}></Issuemanage>
       </Suspense>
+      
+      <Footer></Footer>
     </>
+
   )
 }
 
